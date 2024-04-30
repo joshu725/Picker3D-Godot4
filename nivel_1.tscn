@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://mbeuuhqr8pyw"]
+[gd_scene load_steps=14 format=3 uid="uid://mbeuuhqr8pyw"]
 
 [ext_resource type="PackedScene" uid="uid://rqwsyuuck83i" path="res://bloque.tscn" id="1_6iukh"]
 [ext_resource type="PackedScene" uid="uid://dld3p23dct6ul" path="res://personaje.tscn" id="2_8na3h"]
@@ -6,6 +6,7 @@
 [ext_resource type="Environment" uid="uid://dayk8w2qroh3m" path="res://resources/nivel_1_enviroment.tres" id="4_otp2n"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="5_tmcrv"]
 [ext_resource type="Texture2D" uid="uid://bkvmydfn5saxg" path="res://addons/virtual_joystick/textures/joystick_tip.png" id="6_po6m3"]
+[ext_resource type="AudioStream" uid="uid://bsma71t5467sx" path="res://assets/sounds/bg_music.mp3" id="7_vty0s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odsyk"]
 albedo_color = Color(0.305882, 0.219608, 0.239216, 1)
@@ -185,3 +186,7 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("6_po6m3")
 texture_pressed = ExtResource("6_po6m3")
 action = "ui_accept"
+
+[node name="Musica_Fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_vty0s")
+autoplay = true
