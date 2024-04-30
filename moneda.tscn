@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://moneda.gd" id="1_yekhi"]
 [ext_resource type="ArrayMesh" uid="uid://crjbq5ih3r7kn" path="res://assets/models/coin.res" id="2_ktklq"]
-[ext_resource type="AudioStream" uid="uid://c30742ssc1kse" path="res://assets/sounds/coin.mp3" id="3_n50q1"]
+[ext_resource type="AudioStream" uid="uid://ce6uoishxysbh" path="res://assets/sounds/coin.wav" id="3_we8ma"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rnl3w"]
 height = 0.15
@@ -21,8 +21,7 @@ shape = SubResource("CylinderShape3D_rnl3w")
 
 [node name="Sonido" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37113e-08, -1, 0, 1, -4.37113e-08, 0, 0, 0)
-stream = ExtResource("3_n50q1")
-volume_db = -10.0
+stream = ExtResource("3_we8ma")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="Sonido" to="." method="_on_sonido_finished"]

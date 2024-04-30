@@ -13,6 +13,7 @@ func _physics_process(delta):
 
 	# Configura el salto
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		$Sonido_Salto.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Obtiene la dirección que se está pulsando y configura el movimiento/desaceleración

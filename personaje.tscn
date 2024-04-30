@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dld3p23dct6ul"]
+[gd_scene load_steps=6 format=3 uid="uid://dld3p23dct6ul"]
 
 [ext_resource type="Script" path="res://personaje.gd" id="1_8y2ck"]
+[ext_resource type="AudioStream" uid="uid://cco5n86nlfaj8" path="res://assets/sounds/jump.ogg" id="2_3il07"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_inbjs"]
 albedo_color = Color(0.85098, 0.262745, 0.309804, 1)
@@ -27,3 +28,6 @@ transform = Transform3D(1, 0, 0, 0, 0.908055, 0.41885, 0, -0.41885, 0.908055, 0,
 
 [node name="Camera3D" type="Camera3D" parent="Control_Camara/Objetivo_Camara"]
 current = true
+
+[node name="Sonido_Salto" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_3il07")
