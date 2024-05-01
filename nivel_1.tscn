@@ -169,6 +169,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96047, 4.20054, -8.69041)
 [node name="Virtual Joystick" parent="." instance=ExtResource("5_tmcrv")]
 
 [node name="Boton_Salto" type="Control" parent="."]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 3
 anchor_left = 1.0
