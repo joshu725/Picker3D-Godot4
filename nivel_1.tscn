@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://mbeuuhqr8pyw"]
+[gd_scene load_steps=18 format=3 uid="uid://mbeuuhqr8pyw"]
 
 [ext_resource type="PackedScene" uid="uid://rqwsyuuck83i" path="res://bloque.tscn" id="1_6iukh"]
+[ext_resource type="Script" path="res://nivel_1.gd" id="1_vvxq5"]
 [ext_resource type="PackedScene" uid="uid://dld3p23dct6ul" path="res://personaje.tscn" id="2_8na3h"]
 [ext_resource type="PackedScene" uid="uid://c804uxm3o0cra" path="res://moneda.tscn" id="3_p0qrn"]
 [ext_resource type="Environment" uid="uid://dayk8w2qroh3m" path="res://resources/nivel_1_enviroment.tres" id="4_otp2n"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ibdby82o1d5k" path="res://assets/buttons/button_light.png" id="6_bqt2m"]
 [ext_resource type="AudioStream" uid="uid://bsma71t5467sx" path="res://assets/sounds/bg_music.mp3" id="7_vty0s"]
 [ext_resource type="Texture2D" uid="uid://b3pb6aqxahx75" path="res://assets/buttons/button_dark.png" id="7_y301a"]
+[ext_resource type="Texture2D" uid="uid://br88txns81t5q" path="res://assets/coin.png" id="11_pud5y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odsyk"]
 albedo_color = Color(0.305882, 0.219608, 0.239216, 1)
@@ -31,6 +33,7 @@ size = Vector3(6, 0.75, 3)
 size = Vector3(6, 0.75, 3)
 
 [node name="Nivel1" type="Node3D"]
+script = ExtResource("1_vvxq5")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("4_otp2n")
@@ -196,3 +199,31 @@ action = "ui_accept"
 stream = ExtResource("7_vty0s")
 volume_db = -5.0
 autoplay = true
+
+[node name="Cantidad_Monedas" type="Label" parent="."]
+offset_left = 30.0
+offset_right = 101.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 125
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Imagen_Moneda" type="TextureRect" parent="Cantidad_Monedas"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -37.0
+offset_right = 64.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("11_pud5y")
+expand_mode = 2
+
+[connection signal="child_exiting_tree" from="Monedas" to="." method="_on_monedas_child_exiting_tree"]
