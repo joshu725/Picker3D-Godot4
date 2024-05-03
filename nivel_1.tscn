@@ -40,6 +40,7 @@ environment = ExtResource("4_otp2n")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.594177, 0.804334, 0, -0.804334, 0.594177, 0, 9.14696, 6.10764)
+light_energy = 0.15
 shadow_enabled = true
 
 [node name="Personaje" parent="." instance=ExtResource("2_8na3h")]
