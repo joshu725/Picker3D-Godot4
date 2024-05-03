@@ -16,7 +16,7 @@ func _physics_process(delta):
 		$Sonido_Salto.play()
 		velocity.y = JUMP_VELOCITY
 	
-	# Obtiene la dirección que se estáasdw   pulsando y configura el movimiento/desaceleración
+	# Obtiene la dirección que se está pulsando y configura el movimiento/desaceleración
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:

@@ -75,6 +75,11 @@ func _ready() -> void:
 	
 	if visibility_mode == Visibility_mode.WHEN_TOUCHED:
 		hide()
+	
+	if OS.get_name() == "Android":
+		$".".visible = true
+	else:
+		$".".visible = false
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:

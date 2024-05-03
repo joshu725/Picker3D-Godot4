@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://mbeuuhqr8pyw"]
+[gd_scene load_steps=16 format=3 uid="uid://mbeuuhqr8pyw"]
 
 [ext_resource type="PackedScene" uid="uid://rqwsyuuck83i" path="res://bloque.tscn" id="1_6iukh"]
 [ext_resource type="PackedScene" uid="uid://dld3p23dct6ul" path="res://personaje.tscn" id="2_8na3h"]
 [ext_resource type="PackedScene" uid="uid://c804uxm3o0cra" path="res://moneda.tscn" id="3_p0qrn"]
 [ext_resource type="Environment" uid="uid://dayk8w2qroh3m" path="res://resources/nivel_1_enviroment.tres" id="4_otp2n"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="5_tmcrv"]
+[ext_resource type="Script" path="res://Boton_Salto.gd" id="6_8ytly"]
 [ext_resource type="Texture2D" uid="uid://ibdby82o1d5k" path="res://assets/buttons/button_light.png" id="6_bqt2m"]
 [ext_resource type="AudioStream" uid="uid://bsma71t5467sx" path="res://assets/sounds/bg_music.mp3" id="7_vty0s"]
 [ext_resource type="Texture2D" uid="uid://b3pb6aqxahx75" path="res://assets/buttons/button_dark.png" id="7_y301a"]
@@ -182,6 +183,7 @@ offset_right = -150.0
 offset_bottom = -150.0
 grow_horizontal = 0
 grow_vertical = 0
+script = ExtResource("6_8ytly")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Boton_Salto"]
 texture_filter = 1
